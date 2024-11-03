@@ -1,8 +1,10 @@
-[gd_scene load_steps=6 format=4 uid="uid://d38g4vmwq57qo"]
+[gd_scene load_steps=8 format=4 uid="uid://d38g4vmwq57qo"]
 
 [ext_resource type="Texture2D" uid="uid://bg37y2sayi2td" path="res://Blue.png" id="1_2gx0j"]
 [ext_resource type="Texture2D" uid="uid://chan0opyg5uy8" path="res://Terrain (16x16).png" id="2_21qh5"]
 [ext_resource type="PackedScene" uid="uid://cloksdblh6vl2" path="res://scenes/main_character.tscn" id="3_352jj"]
+[ext_resource type="PackedScene" uid="uid://jqjgho1kxbvj" path="res://scenes/collectible.tscn" id="4_4f7sw"]
+[ext_resource type="Script" path="res://game_manager.gd" id="5_7ux0k"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kdexk"]
 texture = ExtResource("2_21qh5")
@@ -171,11 +173,8 @@ sources/0 = SubResource("TileSetAtlasSource_kdexk")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 texture_filter = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+offset_right = 1174.0
+offset_bottom = 666.0
 texture = ExtResource("1_2gx0j")
 stretch_mode = 1
 
@@ -186,4 +185,29 @@ tile_map_data = PackedByteArray("AAAFAA8AAAAHAAgAAAAGAA8AAAAHAAgAAAAHAA8AAAAHAAg
 tile_set = SubResource("TileSet_6lxrg")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("3_352jj")]
-position = Vector2(452, 503)
+position = Vector2(427, 446)
+
+[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+position = Vector2(3.33334, 9)
+scale = Vector2(0.333333, 0.333333)
+position_smoothing_enabled = true
+position_smoothing_speed = 10.0
+
+[node name="Collectible" parent="." instance=ExtResource("4_4f7sw")]
+position = Vector2(225, 326)
+
+[node name="Collectible2" parent="." instance=ExtResource("4_4f7sw")]
+position = Vector2(416, 179)
+
+[node name="Collectible3" parent="." instance=ExtResource("4_4f7sw")]
+position = Vector2(633, 417)
+
+[node name="Collectible4" parent="." instance=ExtResource("4_4f7sw")]
+position = Vector2(938, 252)
+
+[node name="Collectible5" parent="." instance=ExtResource("4_4f7sw")]
+position = Vector2(1115, 214)
+
+[node name="GameManager" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("5_7ux0k")
