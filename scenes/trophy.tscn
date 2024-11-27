@@ -1,11 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://dpms3ib3v1v72"]
+[gd_scene load_steps=5 format=3 uid="uid://dpms3ib3v1v72"]
 
 [ext_resource type="Texture2D" uid="uid://dieyka2up24fi" path="res://End (Idle).png" id="1_pf0i2"]
+[ext_resource type="Script" path="res://scenes/trophy.gd" id="1_r0smx"]
+[ext_resource type="PackedScene" uid="uid://dvsmwuwpti8ts" path="res://scenes/levelTwo.tscn" id="2_mbls6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ti884"]
 size = Vector2(61, 57)
 
 [node name="Trophy" type="Area2D"]
+script = ExtResource("1_r0smx")
+target_level = ExtResource("2_mbls6")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
@@ -16,3 +20,5 @@ texture = ExtResource("1_pf0i2")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(9.5, 21.5)
 shape = SubResource("RectangleShape2D_ti884")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

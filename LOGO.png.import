@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5jm8kv3vnroa"
-path="res://.godot/imported/Pink.png-d5be55b295821ab9d926978278761345.ctex"
+uid="uid://17hw4aqbskom"
+path="res://.godot/imported/LOGO.png-d64952310586affc9777048ba72b1a55.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Pixel Adventure 1/Background/Pink.png"
-dest_files=["res://.godot/imported/Pink.png-d5be55b295821ab9d926978278761345.ctex"]
+source_file="res://LOGO.png"
+dest_files=["res://.godot/imported/LOGO.png-d64952310586affc9777048ba72b1a55.ctex"]
 
 [params]
 

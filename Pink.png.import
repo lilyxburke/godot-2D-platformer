@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dupela7otim0"
-path="res://.godot/imported/Green.png-3aee3b75cfe4ec109d099833138d4b8b.ctex"
+uid="uid://5jm8kv3vnroa"
+path="res://.godot/imported/Pink.png-59945329d561b5ef1136740f03dbe479.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Pixel Adventure 1/Background/Green.png"
-dest_files=["res://.godot/imported/Green.png-3aee3b75cfe4ec109d099833138d4b8b.ctex"]
+source_file="res://Pink.png"
+dest_files=["res://.godot/imported/Pink.png-59945329d561b5ef1136740f03dbe479.ctex"]
 
 [params]
 
